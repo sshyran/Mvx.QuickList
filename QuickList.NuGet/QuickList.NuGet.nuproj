@@ -19,6 +19,7 @@
     <Owners>DornerWorks, Ltd.</Owners>
     <Copyright>2020 DornerWorks, Ltd.</Copyright>
     <PackageProjectUrl>https://github.com/dornerworks/Mvx.QuickList</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/dornerworks/Mvx.QuickList/blob/main/LICENSE.md</PackageLicenseUrl>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{E8A1B6E5-7AD8-4C31-AFB1-EC34DE604382}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>QuickList</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CommandRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)LabelRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OptionRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SectionRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SwitchRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TextEntryRowModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickRowModelExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)QuickRowModelType.cs" />
+  </ItemGroup>
+</Project>

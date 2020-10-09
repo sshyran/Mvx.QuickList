@@ -11,12 +11,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Install dependencies
-      run: dotnet restore
-    - name: Build
+    - name: Install Dependencies
       run: |
         nuget sources add -name "nugetizer3000" -source https://ci.appveyor.com/nuget/nugetizer3000
         nuget restore
+    - name: Build
+      run: |
         msbuild Quicklist.NuGet/QuickList.NuGet.nuproj /verbosity:normal /t:Rebuild /p:Configuration=Release
     - name: NuGet push
-      run: dotnet nuget push QuickList.NuGet/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: |
+        dotnet nuget push QuickList.NuGet/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

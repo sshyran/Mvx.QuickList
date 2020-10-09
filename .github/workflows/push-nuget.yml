@@ -1,0 +1,22 @@
+name: Publish Nuget
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install dependencies
+      run: dotnet restore
+    - name: Build
+      run: |
+        nuget sources add -name "nugetizer3000" -source https://ci.appveyor.com/nuget/nugetizer3000
+        nuget restore
+        msbuild Quicklist.NuGet/QuickList.NuGet.nuproj /verbosity:normal /t:Rebuild /p:Configuration=Release
+    - name: NuGet push
+      run: dotnet nuget push QuickList.NuGet/bin/Release/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json

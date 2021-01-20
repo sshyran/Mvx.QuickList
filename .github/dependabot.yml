@@ -1,0 +1,14 @@
+# dependabot.yml file with
+# customized nuget configuration
+
+version: 2
+updates:
+  - package-ecosystem: "nuget"
+    directory: "/QuickList.iOS"
+    schedule:
+      interval: "daily"
+      
+  - package-ecosystem: "nuget"
+    directory: "/QuickList.Android"
+    schedule:
+      interval: "daily"

@@ -5,10 +5,12 @@ version: 2
 updates:
   - package-ecosystem: "nuget"
     directory: "/QuickList.iOS"
+    target-branch: "develop"
     schedule:
       interval: "daily"
       
   - package-ecosystem: "nuget"
     directory: "/QuickList.Android"
+    target-branch: "develop"
     schedule:
       interval: "daily"

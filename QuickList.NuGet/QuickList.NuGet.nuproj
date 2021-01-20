@@ -7,7 +7,7 @@
     <ProjectGuid>{99201F80-631F-494A-97B1-CCE27980EF86}</ProjectGuid>
     <Description>QuickList</Description>
     <PackageId>Mvx.QuickList</PackageId>
-    <PackageVersion>0.0.1</PackageVersion>
+    <PackageVersion>0.0.2</PackageVersion>
     <Authors>C. Brandon Butler</Authors>
     <DevelopmentDependency>false</DevelopmentDependency>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
